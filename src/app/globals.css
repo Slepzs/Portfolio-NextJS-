@@ -26,3 +26,19 @@ body {
     rgb(var(--background-start-rgb));
 }
  */
+
+.bg-fade-in {
+  animation: bg-fade 1s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bg-fade {
+  0% {
+    background-color: blue;
+    color: white;
+  }
+  100% {
+    background-color: white;
+    color: black;
+  }
+}

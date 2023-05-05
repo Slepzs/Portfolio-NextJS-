@@ -1,12 +1,15 @@
 import Image from "next/image";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Layout/Header/Header";
+import Footer from "@/components/Layout/Footer/Footer";
+import Statics from "@/components/Layout/Statics/Statics";
+import Content from "@/components/Layout/Content/Content";
 
 export default function Home() {
   return (
     <main>
       <Header />
-      <h1>I am page</h1>
+      <Content />
+      <Statics />
       <Footer />
     </main>
   );
