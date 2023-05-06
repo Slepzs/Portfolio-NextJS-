@@ -3,7 +3,7 @@ export default function TextHighlighter(text: string) {
   const regex = /\[\[(.*?)\]\]/g;
   const boldText = text.replace(
     regex,
-    "<span class='font-bold text-blue-500'>$1</span>"
+    "<span class='font-bold font-cinzel'>$1</span>"
   );
 
   return boldText;
