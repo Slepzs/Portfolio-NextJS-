@@ -1,10 +1,13 @@
 import ButtonLink from "@/components/Atoms/Button";
+import Logo from "@/components/Atoms/Logo";
 
 export default function Header() {
   return (
-    <header className="px-4 border-b-4 border-blue-400">
+    <header className="px-4 shadow">
       <div className="grid items-center grid-cols-[200px,1fr,auto] py-5">
-        <div>Logo</div>
+        <div>
+          <Logo size="sm" />
+        </div>
         <nav className="w-full grid justify-center">
           <ul className="flex gap-4">
             <li>Stuff</li>
