@@ -10,9 +10,7 @@ export default function Header() {
         </div>
         <nav className="w-full grid justify-center">
           <ul className="flex gap-4">
-            <li>Stuff</li>
-            <li>Stuff</li>
-            <li>Stuff</li>
+            <li>Projects</li>
           </ul>
         </nav>
         <div className="flex items-center gap-8">
