@@ -1,8 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Project() {
   return (
-    <div className="border border-gray-200 rounded-md  h-[500px]">
+    <Link
+      href="https://github.com/Slepzs/Portfolio-NextJS-"
+      className="border border-gray-200 rounded-md  h-[500px]"
+    >
       <div className="border-b border-gray bg-gray-100 p-4 grid justify-center">
         <Image src="/hero.png" width="300" height="300" alt="hero" />
       </div>
@@ -12,6 +16,6 @@ export default function Project() {
           My new portfolio built with Next.js, TailwindCSS and TypeScript
         </p>
       </div>
-    </div>
+    </Link>
   );
 }
