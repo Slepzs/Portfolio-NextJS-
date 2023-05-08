@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function HeroMaster() {
   return (
     <>
-      <div className="grid xl:grid-cols-2 border-b-4 border-blue-500">
+      <div className="grid xl:grid-cols-2">
         <div className="xl:h-[calc(100vh-108px)] grid items-center justify-center">
           <div className="px-8 max-w-[800px]">
             <h1 className="md:text-5xl xl:text-7xl leading-[120%] font-cinzel font-bold">
