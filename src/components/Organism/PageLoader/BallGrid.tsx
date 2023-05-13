@@ -4,20 +4,14 @@ import gsap from "gsap";
 
 const BallGridAnimation = () => {
   const ballGridRef = useRef(null);
+  const divs = Array.from({ length: 100 }, (_, index) => index + 1);
 
   useEffect(() => {
     const ballGrid = ballGridRef.current;
-    const rows = 5; // Number of rows in the grid
-    const columns = 5; // Number of columns in the grid
+    const rows = 100; // Number of rows in the grid
+    const columns = 100; // Number of columns in the grid
 
     // Generate the ball grid
-    for (let i = 0; i < rows * columns; i++) {
-      const ball = document.createElement("div");
-      ball.classList.add("ball");
-      if (ballGrid) {
-        ballGrid.appendChild(ball);
-      }
-    }
 
     // GSAP stagger animation
     gsap.from(".ball", {
@@ -28,13 +22,27 @@ const BallGridAnimation = () => {
         each: 0.1, // Time delay between each element animation
         from: "edges", // Start the animation from the top left corner
         grid: [rows, columns], // Define the grid size
-        axis: "x", // Animate in both x and y directions
-        ease: "power2.out", // Animation easing function
+        axis: "y", // Animate in both x and y directions
+        // ease: "power2.out", // Animation easing function
       },
     });
   }, []);
 
-  return <div ref={ballGridRef} id="ballGrid"></div>;
+  return (
+    <div
+      ref={ballGridRef}
+      className="grid grid-cols-[repeat(10,10vw)] grid-rows-[repeat(10,10vh)] w-screen
+      h-screen"
+      id="ballGrid"
+    >
+      {divs.map((number) => (
+        <div
+          className="ball w-full h-full bg-gray-100 block"
+          key={number}
+        ></div>
+      ))}
+    </div>
+  );
 };
 
 export default BallGridAnimation;
