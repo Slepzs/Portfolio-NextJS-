@@ -16,8 +16,8 @@ const BallGridAnimation = () => {
     // GSAP stagger animation
     gsap.from(".ball", {
       duration: 1,
-      opacity: 0,
-      scale: 0,
+      opacity: 1,
+      scale: 1,
       stagger: {
         each: 0.1, // Time delay between each element animation
         from: "edges", // Start the animation from the top left corner
@@ -29,18 +29,17 @@ const BallGridAnimation = () => {
   }, []);
 
   return (
-    <div
-      ref={ballGridRef}
-      className="grid grid-cols-[repeat(10,10vw)] grid-rows-[repeat(10,10vh)] w-screen
+    <div className="absolute left-0 top-0">
+      <div
+        ref={ballGridRef}
+        className="grid grid-cols-[repeat(10,10vw)] grid-rows-[repeat(10,10vh)] w-screen
       h-screen"
-      id="ballGrid"
-    >
-      {divs.map((number) => (
-        <div
-          className="ball w-full h-full bg-gray-100 block"
-          key={number}
-        ></div>
-      ))}
+        id="ballGrid"
+      >
+        {divs.map((number) => (
+          <div className="ball w-full h-full bg-white block" key={number}></div>
+        ))}
+      </div>
     </div>
   );
 };
